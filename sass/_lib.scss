@@ -1,0 +1,78 @@
+////////////////////////
+///        mixin     //
+////////////////////////
+
+@mixin pc {
+    @media screen and (min-width: 960px) {
+        @content;
+    }
+}
+@mixin tab {
+    @media screen and (max-width: 959px) {
+        @content;
+    }
+}
+@mixin sp {
+    @media screen and (max-width: 600px) {
+        @content;
+    }
+}
+
+/////////////////////////
+/////   　　共通  　  /////
+/////////////////////////
+
+html {
+    font-size: 62.5%;
+    user-select: none;
+}
+
+
+body {
+    position: relative;
+    @include tab {
+        position: absolute;
+    }
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 5rem;
+    margin: 50px 0px;
+    &::before {
+        margin-right: 3rem;
+        width: 5em;
+        content: '';
+        height: 5px;
+        background-color: #21c44a;
+        display: inline-block;
+        @include tab {
+            width: 2em;
+        }
+    }
+    
+    &::after {
+        margin-left: 3rem;
+        width: 5em;
+        content: '';
+        height: 5px;
+        background-color: #21c44a;
+        display: inline-block;
+        @include tab {
+            width: 2em;
+        }
+    }
+}
+
+.subtitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 2rem;
+    margin: 50px 0px;
+    color: rgb(100, 100, 100);
+}

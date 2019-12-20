@@ -1,0 +1,138 @@
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    @include tab {
+        width: 100%;
+        height: 80px;
+        display: inline-block;
+    }
+    .header-logo {
+        font-size: 3rem;
+        color: #21c44a;
+        font-family: 'Marker Felt';
+        @include tab {
+            font-size: 2rem;
+            line-height: 50px;
+        }
+    }
+     .nav-menu {
+        font-family: 'Marker Felt';
+         font-size: 2rem;
+         width: 30%;
+         color: #fff;
+         @include tab {
+             display: none;
+         }
+         ul {
+             display: flex;
+             justify-content: space-between;
+             a:after {
+                 content: "";
+                 display: block;
+                 width: 100%;
+                 height: 1px;
+                 background-color:#fff;
+                 transition: 0.3s;
+                 transform: scaleX(0);
+                }
+                a:hover{
+                    &:after {
+                        color: black;
+                        transform: scaleX(1);
+                    }
+                }
+            }
+        }
+    }
+
+
+
+#ham {
+    display: none;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 30px;
+    top: 15px;
+    z-index: 1;
+    @include tab {
+        display: inline-block;
+    } 
+}
+
+#ham:before, #ham:after {
+    content: "";
+    width: 100%;
+    height: 3px;
+    background: #21c44a;
+    position: absolute;
+    transition: 0.5s;
+}
+
+#ham:before {
+    top: 10px;
+}
+
+#ham:after {
+    bottom: 10px;
+}
+
+#ham.active:before {
+    top: 20px;
+    transform: rotate(225deg);
+}
+
+#ham.active:after{
+    bottom: 25px;
+    transform: rotate(-225deg);
+}
+
+.block {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.9);
+}
+
+#block-menu {
+    display: none;
+    width: 100%;
+    height: 80vh;
+    background-color: rgba(0,0,0,0.9);
+    color: white;
+    font-style: italic;
+    font-size: 3rem;
+    transform: translateY(-120%);
+    transition: 0.5s;
+    border-radius: 30px;
+    border: 1px solid white;
+
+    @include tab {
+        display: block;
+    }
+    ul {
+        text-align: center;
+        a {
+        line-height: 3;
+        &:hover:after {
+            content: "";
+            width: 20%;
+            height: 1px;
+            background-color: #fff;
+            display: block;
+            margin: 0 auto;
+            }
+        }
+    }
+}
+
+#block-menu.active {
+    transform: translateY(-0%);
+}
