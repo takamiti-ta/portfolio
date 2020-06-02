@@ -2,9 +2,10 @@ header {
     width: 100%;
     position: fixed;
     top: 0;
+    right: 0;
     left: 0;
     z-index: 2;
-    background-color: black;
+    background-color: rgba(0,0,0,0);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,25 +24,25 @@ header {
             line-height: 50px;
         }
     }
-     .nav-menu {
+.nav-menu {
         font-family: 'Marker Felt';
-         font-size: 2rem;
-         width: 30%;
-         color: #fff;
-         @include tab {
-             display: none;
-         }
-         ul {
-             display: flex;
-             justify-content: space-between;
-             a:after {
-                 content: "";
-                 display: block;
-                 width: 100%;
-                 height: 1px;
-                 background-color:#fff;
-                 transition: 0.3s;
-                 transform: scaleX(0);
+        font-size: 2rem;
+        width: 30%;
+        color: #fff;
+        @include tab {
+            display: none;
+        }
+        ul {
+            display: flex;
+            justify-content: space-between;
+            a:after {
+                content: "";
+                display: block;
+                width: 100%;
+                height: 1px;
+                background-color:#fff;
+                transition: 0.3s;
+                transform: scaleX(0);
                 }
                 a:hover{
                     &:after {
@@ -57,12 +58,12 @@ header {
 
 #ham {
     display: none;
-    width: 50px;
-    height: 50px;
-    position: absolute;
+    width: 25px;
+    height: 40px;
+    position: fixed;
     right: 30px;
-    top: 15px;
-    z-index: 1;
+    top: 23px;
+    z-index: 101;
     @include tab {
         display: inline-block;
     } 
@@ -91,48 +92,54 @@ header {
 }
 
 #ham.active:after{
-    bottom: 25px;
+    bottom: 17px;
     transform: rotate(-225deg);
 }
 
-.block {
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0,0,0,0.9);
-}
 
 #block-menu {
+    position: fixed;
+    z-index: 100;
     display: none;
     width: 100%;
-    height: 80vh;
+    height: 100vh;
     background-color: rgba(0,0,0,0.9);
     color: white;
     font-style: italic;
     font-size: 3rem;
-    transform: translateY(-120%);
+    transform: translateY(-100%);
     transition: 0.5s;
-    border-radius: 30px;
-    border: 1px solid white;
-
     @include tab {
         display: block;
     }
     ul {
-        text-align: center;
-        a {
-        line-height: 3;
-        &:hover:after {
-            content: "";
-            width: 20%;
-            height: 1px;
-            background-color: #fff;
-            display: block;
-            margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+        li {
+            margin-bottom: 50px;
+            a {
+                text-decoration: line-through;
             }
         }
     }
 }
 
 #block-menu.active {
-    transform: translateY(-0%);
+    transform: translateY(0%);
+}
+
+header.smaller {
+    background-color: rgba(0,0,0,1);
+    transition: 0.6s;
+}
+
+#header #gnav li a {
+	color: white;
+}
+#header #gnav li a.current {
+	color: #21c44a;
+	// text-decoration: line-through;
 }

@@ -10,24 +10,23 @@
 
 
 .top-text {
-    color: whitesmoke;
-    font-size: 7rem;
-    width: 100%;
-    text-align: center;
-    letter-spacing: 5px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    text-shadow: 6px 0px 0px black;
-    @include tab {
-      font-size: 5rem;
-    }
-    h1 {
-        margin-bottom: 20px;
-    }
+  // width: 100%;
+  font-size: 7rem;
+  color: whitesmoke;
+  text-align: center;
+  letter-spacing: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-shadow: 6px 0px 0px black;
+  @include tab {
+    font-size: 5rem;
+  }
+  h1 {
+      margin-bottom: 20px;
+  }
 }
-
 
 .btn {  
   position: absolute;

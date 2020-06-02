@@ -1,65 +1,201 @@
 .portfolio {
     width: 100%;
     padding: 100px 0;
+    color: #333333;
 }
 
-.portfolio-menu {
+.portfolio-list {
     width: 80%;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
 }
 
-#prev {
-    display: block;
-    content: "";
-    border-left: 5px solid black;
-    border-bottom: 5px solid black;
-    width: 50px;
-    height: 50px;
-    transform: rotate(45deg);
-    align-self: center;
-    margin-left: 10rem;
+.portfolio1 {
+    display: flex;
+    margin-bottom: 100px;
     @include tab {
-        margin: -25px;
+    flex-direction: column;
     }
 }
-#next {
-    display: block;
-    content: "";
-    border-right: 5px solid black;
-    border-top: 5px solid black;
-    width: 50px;
-    height: 50px;
-    transform: rotate(45deg);
-    align-self: center;
-    margin-right: 10rem;
+.portfolio2 {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 100px;
     @include tab {
-        margin: -25px;
+        flex-direction: column;
+    }
+}
+.portfolio3 {
+    display: flex;
+    margin-bottom: 100px;
+    @include tab {
+    flex-direction: column;
+    }
+}
+.portfolio4 {
+    display: flex;
+    flex-direction: row-reverse;
+    @include tab {
+    flex-direction: column;
+    }
+}
+.portfolio-img {
+    width: 500px;
+    height: 350px;
+    object-fit: cover;
+    object-position: top;
+    // border: 1px solid black;
+    @include tab {
+        width: 100%;
+        height: 250px;
     }
 }
 
-.slide-show {
-    display: flex;
-    justify-content: center;
+.portfolio-title {
+    font-weight: bold;
+    font-size: 3rem;
+    text-align: center;
+    text-decoration: underline;
+    @include tab {
+        margin-top: 20px;
+        font-size: 2rem;
+    }
 }
-
-
-
-img {
-  height: 70vh;
-  object-fit: cover;
-  border: 3px solid black;
-  @include tab {
-      width: 250px;
-  }
-}
-
 
 .portfolio-text {
-    text-align: center;
     font-size: 2rem;
-    width: 50%;
-    margin: 5% auto;
-    line-height: 1.2;
+    width: 60%;
+    line-height: 2;
+    padding: 20px;
+    margin: 0 auto;
+    color: #333333;
+    @include tab {
+        width: 100%;
+    }
 }
+
+
+.port-item1 {
+    position: relative;
+}
+.port-item2 {
+    position: relative;
+}
+.port-item3 {
+    position: relative;
+}
+.port-item4 {
+    position: relative;
+}
+
+#port-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100px;
+    background: rgba(33, 196, 74, 0.9);
+    font-size: 3rem;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+    @include tab {
+        height: 50px;
+        font-size: 1.5rem;
+
+    }
+}
+
+#port-btn:hover{
+    background: rgb(33, 196, 74);
+}
+
+.fa-search-plus {
+    margin-left: 10px;
+}
+
+
+
+
+// .my-parts {
+//   display: inline-block;
+//   width: 50px;
+//   height: 50px;
+//   position: relative;
+// //   box-shadow: 0 0 0 1px rgba(0,0,0,.1);
+//   cursor: pointer;
+//   top: 50%;
+//   left: 50%;
+// }
+// .my-parts span::before,
+// .my-parts span::after {
+//   display: block;
+//   content: "";
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   width: 84%;
+//   height: 16%;
+//   margin: -8% 0 0 -42%;
+//   background: rgba(15, 15, 15, 0.76);
+// }
+// .my-parts span::after {
+//   transform: rotate(90deg);
+// }
+
+
+
+
+
+
+
+// .portfolio-menu {
+//     width: 80%;
+//     margin: 0 auto;
+//     display: flex;
+//     justify-content: space-between;
+// }
+
+// #prev {
+//     display: block;
+//     content: "";
+//     border-left: 5px solid black;
+//     border-bottom: 5px solid black;
+//     width: 50px;
+//     height: 50px;
+//     transform: rotate(45deg);
+//     align-self: center;
+//     margin-left: 10rem;
+//     @include tab {
+//         margin: -25px;
+//     }
+// }
+// #next {
+//     display: block;
+//     content: "";
+//     border-right: 5px solid black;
+//     border-top: 5px solid black;
+//     width: 50px;
+//     height: 50px;
+//     transform: rotate(45deg);
+//     align-self: center;
+//     margin-right: 10rem;
+//     @include tab {
+//         margin: -22px;
+//     }
+// }
+
+// .slide-show {
+//     display: flex;
+//     justify-content: center;
+// }
+
+// .portfolio-text {
+//     text-align: center;
+//     font-size: 2rem;
+//     width: 50%;
+//     margin: 5% auto;
+//     line-height: 1.2;
+// }

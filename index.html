@@ -8,50 +8,55 @@
     <link rel="stylesheet" href="css/main.css">
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <title>Takamichi Kanno</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"
+        src="./jquery-1.9.1.min.js"></script>
 </head>
 
-<header>
-    <h1 class="header-logo">Takamichi Kanno</h1>
+
+<header id="header">
+    <h1 class="header-logo" id="site-logo">Takamichi Kanno</h1>
     <nav class="nav-menu">
-        <ul>
-            <a href="">About</a>
-            <a href="">Skills</a>
-            <a href="">Portfolio</a>
-            <a href="">Contact</a>
+        <ul id="gnav">
+            <li><a href="#contents0">Top</a></li>
+            <li><a href="#contents01">About</a></li>
+            <li><a href="#contents02">Skills</a></li>
+            <li><a href="#contents03">Portfolio</a></li>
+            <li><a href="#contents04">Contact</a></li>
         </ul>
     </nav>
-    <div id="ham"></div>
-    <div id="block-menu">
-        <ul>
-            <li><a href="">Top</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Skills</a></li>
-            <li><a href="">Portfolio</a></li>
-            <li><a href="">Contact</a></li>
-        </ul>
-    </div>
-    </div>
 </header>
 
 <body>
+    <div id="ham">
+    </div>
+    <div id="block-menu">
+        <ul>
+            <li><a href="#contents0">Top</a></li>
+            <li><a href="#contents01">About</a></li>
+            <li><a href="#contents02">Skills</a></li>
+            <li><a href="#contents03">Portfolio</a></li>
+            <li><a href="#contents04">Contact</a></li>
+        </ul>
+    </div>
     <main>
-        <section class="top">
+        <div id="page_top"><a href="#"></a></div>
+        <section class="top" id="contents0" name="contents0">
             <div class="top-view">
                 <div class="top-text">
                     <h1>Takamichi Kanno</h1>
-                    <p>Port Folio</p>
+                    <p id="letter">Port Folio</p>
                 </div>
-                <a href="#" class="btn"><i class="fa fa-chevron-right"></i>contact</a>
+                <a href="#contents04" class="btn"><i class="fa fa-chevron-right"></i>contact</a>
             </div>
         </section>
-        <section class="about">
+        <section class="about" id="contents01" name="contents01">
             <h1 class="title">about</h1>
             <p class="subtitle">簡単な自己紹介です</p>
             <div class="about-menu">
-                <!-- <div> -->
-                <img src="img/about.jpg"" alt="" class=" about-img">
-                <!-- </div> -->
-                <div class="profile">
+                <img src="img/about2.jpg"" alt="" class=" about-img sa sa--lr">
+                <div class="profile sa sa--rl">
                     <p>Profile</p>
                     <p>菅野貴道
                         2017年 服部栄養専門学校学校卒業
@@ -62,19 +67,20 @@
                 </div>
             </div>
         </section>
-        <section class="skill">
+        <section class="skill" id="contents02" name="#contents02">
             <h1 class="title">Skills</h1>
             <p class="subtitle">学習した言語一覧です</p>
             <div class="skill-menu">
-                <div class="profile2">
-                    <p>HTML,CSS,SCSS,JavaScriptを使い
-                        Webサイトのコーディング
+                <div class="profile2 sa sa--lr">
+                    <p>HTML CSS SCSS
+                        JavaScriptを使用し
+                        Webサイトの製作
                         GitHubでの共同開発
                         Reactを使い簡単なアプリ作成
                         現在はReact.jsを主に学習中です。
                     </p>
                 </div>
-                <div class="skill-icon">
+                <div class="skill-icon sa sa--rl">
                     <div class="skill-icon-item">
                         <i class="fab fa-html5"></i>
                         <p>HTML</p>
@@ -99,55 +105,118 @@
                         <i class="fab fa-react"></i>
                         <p>React.js</p>
                     </div>
-                    <!-- <ul>
-                        <li><i class="fab fa-css3-alt"></i>css</li>
-                        <li><i class="fab fa-sass"></i>sass</li>
-                        <li><i class="fab fa-github"></i>GitHub</li>
-                        <li><i class="fab fa-js"></i>JavaScript</li>
-                        <li><i class="fab fa-react"></i>React-js</li> -->
-                    <!-- <li><i class="fab fa-wbordpress-simple"></i>WordPress</li> -->
-                    <!-- <li><i class="fab fa-node-js"></i>Node-js</li> -->
-                    <!-- </ul> -->
                 </div>
             </div>
         </section>
-        <section class="portfolio">
+        <section class="portfolio" id="contents03">
             <h1 class="title">Portfolio</h1>
             <p class="subtitle">コーディング一覧です</p>
-            <div class="portfolio-menu">
-                <div id="prev"></div>
-                <div class="slide-show">
-                    <img src="img/salonBeppu.png" alt="" id="main_image">
+            <div class="portfolio-list">
+                <div class="portfolio1">
+                    <div class="port-item1">
+                        <a href="img/premil.png" data-lightbox="group">
+                            <p id="port-btn">拡大<i class="fas fa-search-plus"></i></p><img src="/img/premil.png"
+                                class="portfolio-img">
+                        </a>
+                    </div>
+                    <div>
+                        <p class="portfolio-title">コーポレートサイト</p>
+                        <p class="portfolio-text">説明が入ります。説明が入ります。説明が入ります。説明が入ります。
+                            説明が入ります。説明が入ります。説明が入ります。説明が入ります。
+                            説明が入ります。説明が入ります。説明が入ります。説明が入ります。
+                        </p>
+                    </div>
                 </div>
-                <div id="next"></div>
-            </div>
-            <!-- <div class="portfolio-text">
-                <p>画像クリックでページが開きます
-                </p> -->
+                <div class="portfolio2">
+                    <div class="port-item2">
+                        <a href="img/salonBeppu.png" data-lightbox="group">
+                            <p id="port-btn">拡大<i class="fas fa-search-plus"></i></p><img src="/img/salonBeppu.png"
+                                class="portfolio-img">
+                        </a>
+                    </div>
+                    <div>
+                        <p class="portfolio-title">コーポレートサイト2</p>
+                        <p class="portfolio-text">説明が入ります。説明が入ります。説明が入ります。説明が入ります。
+                            説明が入ります。説明が入ります。説明が入ります。説明が入ります。
+                            説明が入ります。説明が入ります。説明が入ります。説明が入ります。
+                        </p>
+                    </div>
+                </div>
+                <div class="portfolio3">
+                    <div class="port-item3">
+                        <a href="img/codevillage.png" data-lightbox="group">
+                            <p id="port-btn">拡大<i class="fas fa-search-plus"></i></p><img src="/img/codevillage.png"
+                                class="portfolio-img">
+                        </a>
+                    </div>
+                    <div>
+                        <p class="portfolio-title">スクールサイト</p>
+                        <p class="portfolio-text">説明が入ります。説明が入ります。説明が入ります。説明が入ります。
+                            説明が入ります。説明が入ります。説明が入ります。説明が入ります。
+                            説明が入ります。説明が入ります。説明が入ります。説明が入ります。
+                        </p>
+                    </div>
+                </div>
+                <div class="portfolio4">
+                    <div class="port-item4">
+                        <a href="img/myblog.png" data-lightbox="group">
+                            <p id="port-btn">拡大<i class="fas fa-search-plus"></i></p><img src="/img/myblog.png"
+                                class="portfolio-img">
+                        </a>
+                    </div>
+                    <div>
+                        <p class="portfolio-title">ブログ</p>
+                        <p class="portfolio-text">説明が入ります。説明が入ります。説明が入ります。説明が入ります。
+                            説明が入ります。説明が入ります。説明が入ります。説明が入ります。
+                            説明が入ります。説明が入ります。説明が入ります。説明が入ります。
+                        </p>
+                    </div>
+                </div>
         </section>
-        <section class="contact">
+
+        <section class="contact" id="contents04">
             <h1 class="title">Contact</h1>
             <p class="subtitle">お問い合わせフォーム</p>
-            <div class="contact-form">
+            <form class="contact-form" method="post" name="myForm" target="dummyIframe" id="formWrapper"
+                action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeTLqcBYv3GMs5aZjBq5q9aGntcEO5M2P5NuUsF_0OBox9gww/formResponse">
                 <div class="cp_iptxt">
-                    <input type="text" placeholder="お名前">
+                    <label for="name">お名前</label>
+                    <input id="name" type="text" name="entry.1367261961" placeholder="お名前を入力してください">
                     <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
                 </div>
                 <div class="cp_iptxt">
-                    <input type="text" placeholder="mail">
+                    <label for="email">メールアドレス</label>
+                    <input id="email" type="text" name="entry.1760244752" placeholder="example@mail.co.jp">
                     <i class="fa fa-envelope fa-lg fa-fw" aria-hidden="true"></i>
                 </div>
                 <div class="cp_iptxt">
-                    <textarea name="" id="" cols="80" rows="10" placeholder="お気軽にお問い合わせください。"></textarea>
+                    <label for="msg">お問い合わせ内容</label>
+                    <textarea id="msg" name="entry.391727774" placeholder="お気軽にお問い合わせください。"></textarea>
                 </div>
-                <a href="#" class="btn contact-btn"><i class="fa fa-chevron-right"></i>送信</a>
-            </div>
+                <div class="btn-space">
+                    <button class="contact-btn" type="submit" name="button" value="送信" onclick="sendGform()">
+                        <i class="fa fa-chevron-right"></i>
+                        送信
+                    </button>
+                </div>
+            </form>
+            <iframe name="dummyIframe" style="display:none;"></iframe>
+            <div id="thxMessage" style="display:none;">お問い合わせありがとうございました。</div>
+
         </section>
     </main>
     <footer>
         <p>© Takamichi Kanno 2019</p>
     </footer>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        function sendGform() {
+            document.myForm.submit();
+            document.getElementById('formWrapper').style.display = 'none';
+            document.getElementById('thxMessage').style.display = 'block';
+        }
+    </script>
 </body>
 
 </html>
